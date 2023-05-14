@@ -9,25 +9,38 @@
     height: 100%;
     background: url(../assets/images/bg.png);
     opacity: 0.1;
+    z-index: 1;
   }
 }
 
 .page__main-block {
+  position: relative;
+  z-index: 2;
 }
 
 .page__services {
+  position: relative;
+  z-index: 2;
 }
 
 .page__about {
+  position: relative;
+  z-index: 2;
 }
 
 .page__project-last {
+  position: relative;
+  z-index: 2;
 }
 
 .page__expirience {
+  position: relative;
+  z-index: 2;
 }
 
 .page__project {
+  position: relative;
+  z-index: 2;
 }
 
 .main-block {
@@ -427,7 +440,7 @@
     margin-bottom: 20px;
   }
   &__table {
-    margin-bottom: 58px;
+    margin-bottom: 28px;
   }
   &__text-block {
     display: flex;
@@ -442,7 +455,6 @@
 }
 
 .table {
-
   border-collapse: collapse;
   text-align: left;
   &__body {
@@ -474,7 +486,6 @@
   }
   &__head-row {
     th {
-      //border-bottom: 1px solid #ABAEB7;
       padding: 10px 0;
       padding-right: 60px;
       &:nth-child(1),
@@ -500,5 +511,31 @@
     &:last-child {
       padding-right: 0;
     }
+  }
+}
+
+.team {
+  &__body {
+  }
+  &__container {
+    padding-top: 140px;
+  }
+  &__image {
+    margin-bottom: 20px;
+  }
+  &__row {
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height: 28px;
+    padding: 30px 0 15px;
+    border-bottom: 1px solid rgba(171, 174, 183, 0.3);;
+  }
+  &__rows {
+  }
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+  &__title {
+    margin-bottom: 50px;
   }
 }

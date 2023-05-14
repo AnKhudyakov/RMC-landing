@@ -49,37 +49,37 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  src: url("../../assets/fonts/Roboto-Light.ttf") format("truetype");
+  src: url("../assets/fonts/Roboto-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("../../assets/fonts/Roboto-Medium.ttf") format("truetype");
+  src: url("../assets/fonts/Roboto-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url("../../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Larken";
   font-style: normal;
   font-weight: 500;
-  src: url("../../assets/fonts/Larken-Medium.ttf") format("truetype");
+  src: url("../assets/fonts/Larken-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "Larken";
   font-style: normal;
   font-weight: 400;
-  src: url("../../assets/fonts/Larken-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Larken-Regular.ttf") format("truetype");
 }
 /* set box sizing */
 *,
@@ -366,6 +366,37 @@ h6 {
   height: 100%;
   background: url(../assets/images/bg.png);
   opacity: 0.1;
+  z-index: 1;
+}
+
+.page__main-block {
+  position: relative;
+  z-index: 2;
+}
+
+.page__services {
+  position: relative;
+  z-index: 2;
+}
+
+.page__about {
+  position: relative;
+  z-index: 2;
+}
+
+.page__project-last {
+  position: relative;
+  z-index: 2;
+}
+
+.page__expirience {
+  position: relative;
+  z-index: 2;
+}
+
+.page__project {
+  position: relative;
+  z-index: 2;
 }
 
 .main-block__body {
@@ -753,7 +784,7 @@ h6 {
   margin-bottom: 20px;
 }
 .project__table {
-  margin-bottom: 58px;
+  margin-bottom: 28px;
 }
 .project__text-block {
   display: flex;
@@ -810,4 +841,24 @@ h6 {
 }
 .table td:last-child {
   padding-right: 0;
+}
+
+.team__container {
+  padding-top: 140px;
+}
+.team__image {
+  margin-bottom: 20px;
+}
+.team__row {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 28px;
+  padding: 30px 0 15px;
+  border-bottom: 1px solid rgba(171, 174, 183, 0.3);
+}
+.team__subtitle {
+  margin-bottom: 20px;
+}
+.team__title {
+  margin-bottom: 50px;
 }/*# sourceMappingURL=styles.css.map */
