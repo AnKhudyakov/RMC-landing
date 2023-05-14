@@ -60,7 +60,7 @@
   &__container {
     display: grid;
     grid-template-columns: 1fr calc(1071 / 1920 * 100%);
-    //max-width: $content_width_large;
+    max-width: 1920px;
     margin: 0 auto;
     @media only screen and (max-width: $breakpoints_tablet) {
       grid-template-columns: 1fr;
@@ -162,6 +162,15 @@
   &__column {
     display: flex;
     gap: 30px;
+    @media only screen and (max-width: $breakpoints_large) {
+      font-size: 14px;
+      column-gap: 30px;
+    }
+    @media only screen and (max-width: $breakpoints_desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
   }
   &__container {
     padding-top: 140px;
@@ -180,6 +189,9 @@
   padding: 391px 30px 30px;
   text-align: start;
   max-width: 300px;
+  @media only screen and (max-width: $breakpoints_mobile) {
+    padding: 250px 30px 30px;
+  }
   &__subtitle {
     position: relative;
     z-index: 5;
@@ -193,6 +205,10 @@
   &:last-child {
     margin-top: -129px;
     margin-bottom: 129px;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -218,7 +234,12 @@
   }
   &__body {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      display: block;
+    }
   }
   &__button {
     margin-left: 20px;
@@ -314,13 +335,20 @@
     &:nth-child(odd) {
       margin-top: -50px;
       margin-bottom: 50px;
+      @media only screen and (max-width: $breakpoints_desktop) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
     }
   }
   &__cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: 20px;
+    gap: 20px;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      justify-content: space-around;
+    }
   }
   &__menu {
   }
@@ -346,6 +374,13 @@
     padding: 62px 235px;
     gap: 143px;
     z-index: 5;
+    @media only screen and (max-width: $breakpoints_large) {
+      padding: 62px 75px;
+      gap: 80px;
+    }
+    @media only screen and (max-width: $breakpoints_desktop) {
+      flex-direction: column;
+    }
   }
   &__container {
     position: relative;
@@ -354,8 +389,8 @@
     max-width: 1920px;
   }
   &__image {
-    width: 557.25px;
-    height: 480px;
+    max-width: 558px;
+    height: 100%;
   }
   &__text-block {
   }
@@ -367,15 +402,14 @@
     width: 100%;
     height: calc(100% - 140px);
     top: 140px;
+    right: 0;
     background: #23272f;
     z-index: 1;
-  }
-  &__background-wrapper {
   }
   &__background-image {
     position: absolute;
     top: 140px;
-    left: 0;
+    right: 0;
     width: 100%;
     height: calc(100% - 140px);
     background: #0b0e17;
@@ -384,11 +418,18 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
       width: 100%;
       height: 100%;
       background: url(../assets/images/bg.png);
       opacity: 0.1;
+    }
+    img {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 0;
+      object-fit: cover;
     }
   }
 }
@@ -427,6 +468,8 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
   }
   &__devider-block {
     max-width: 472px;
@@ -488,9 +531,15 @@
     th {
       padding: 10px 0;
       padding-right: 60px;
+      @media only screen and (max-width: $breakpoints_mobile) {
+        padding-right: 0px;
+      }
       &:nth-child(1),
       &:nth-child(2) {
         padding-right: 70px;
+        @media only screen and (max-width: $breakpoints_mobile) {
+          padding-right: 0px;
+        }
       }
       &:last-child {
         padding-right: 0;
@@ -504,9 +553,15 @@
     &:nth-child(1) {
       padding-right: 70px;
       color: #fff;
+      @media only screen and (max-width: $breakpoints_mobile) {
+        padding-right: 0px;
+      }
     }
     &:nth-child(2) {
       padding-right: 70px;
+      @media only screen and (max-width: $breakpoints_mobile) {
+        padding-right: 0px;
+      }
     }
     &:last-child {
       padding-right: 0;
@@ -549,9 +604,11 @@
 
 .image-block {
   &__container {
+    padding: 0 20px;
     display: flex;
     padding-top: 140px;
     justify-content: center;
+    flex-wrap: wrap;
   }
   &__image {
     width: 258px;
