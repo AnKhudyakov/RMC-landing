@@ -1,0 +1,73 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  &__container {
+    @extend %container;
+    max-width: $content_width_large;
+    position: relative;
+    min-height: 102px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr calc(1071 / 1920 * 100%);
+    @media only screen and (max-width: $breakpoints_tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+    gap: 12px;
+  }
+  &__body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-size: 50px;
+    font-family: "Larken", sans-serif;
+    color: inherit;
+    @media only screen and (max-width: $breakpoints_large) {
+      font-size: 40px;
+    }
+    @media only screen and (max-width: $breakpoints_desktop) {
+      font-size: 30px;
+    }
+    @media only screen and (max-width: $breakpoints_tablet) {
+      font-size: 24px;
+    }
+  }
+  &__menu {
+    padding: 5px 25px;
+    text-transform: uppercase;
+  }
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.menu {
+  &__item {
+  }
+  &__link {
+    color: #abaeb7;
+    line-height: calc(19 / 16 * 100%);
+    font-size: 16px;
+    font-weight: 500;
+    @media only screen and (max-width: $breakpoints_large) {
+      font-size: 14px;
+      column-gap: 30px;
+    }
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    gap: 15px 35px;
+
+    flex-wrap: wrap;
+    @media only screen and (max-width: $breakpoints_large) {
+      column-gap: 20px;
+    }
+  }
+}

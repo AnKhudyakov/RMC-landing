@@ -1,0 +1,21 @@
+@import "./variables";
+
+%font-button {
+  
+  @media only screen and (max-width: $breakpoints_tablet) {
+    font-size: 12px;
+  }
+}
+
+
+%container {
+  padding: 0 $padding_side;
+  margin: 0 auto;
+  box-sizing: content-box;
+  @media only screen and (max-width: $breakpoints_large) {
+    padding: 0 $padding_destop;
+  }
+  @media only screen and (max-width: $breakpoints_tablet) {
+    padding: 0 $padding_tablet;
+  }
+}

@@ -1,0 +1,74 @@
+//Headers
+h1 {
+  font-family: "Larken", sans-serif;
+  font-style: normal;
+  font-size: 84px;
+  line-height: 112%;
+  text-transform: uppercase;
+  margin: 0;
+  @media only screen and (max-width: $breakpoints_large) {
+    font-size: 50px;
+  }
+  @media only screen and (max-width: $breakpoints_desktop) {
+    font-size: 42px;
+  }
+}
+
+h2 {
+  font-family: "Larken", sans-serif;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 128%;
+  @media only screen and (max-width: $breakpoints_tablet) {
+    //font-size: 30px;
+  }
+  @media only screen and (max-width: $breakpoints_mobile) {
+    // font-size: 28px;
+  }
+}
+
+h3 {
+  font-family: "Larken", sans-serif;
+  font-style: normal;
+  font-size: 48px;
+  line-height: calc (62 / 48 * 100%);
+  @media only screen and (max-width: $breakpoints_tablet) {
+    //font-size: 22px;
+  }
+}
+
+h4 {
+  font-style: normal;
+  font-size: 24px;
+  line-height: 31px;
+  @media only screen and (max-width: $breakpoints_tablet) {
+    //font-size: 18px;
+  }
+  @media only screen and (max-width: $breakpoints_mobile) {
+    //font-size: 16px;
+  }
+}
+
+h5 {
+  font-family: "Larken", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #ffc978;
+  @media only screen and (max-width: $breakpoints_tablet) {
+    font-size: 12px;
+  }
+}
+
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  @media only screen and (max-width: $breakpoints_tablet) {
+    font-size: 12px;
+  }
+}

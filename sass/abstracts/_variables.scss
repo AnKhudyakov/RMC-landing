@@ -1,0 +1,46 @@
+$color_text: #c4c4c4;
+
+$color_primary: #181818;
+$color_secondary: #000000;
+
+$content_width_large: 1720px;
+$content_width: 1290px;
+
+$breakpoints_large: 1720px;
+$breakpoints_desktop: 1250px;
+$breakpoints_tablet: 992px;
+$breakpoints_mobile: 767px;
+
+$padding_side: 100px;
+$padding_destop: 60px;
+$padding_tablet: 30px;
+$padding_mobile: 15px;
+
+//Animation
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showTop {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0;
+  }
+}

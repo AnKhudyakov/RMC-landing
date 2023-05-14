@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+
+@import "../sass/abstracts/placeholders";
+@import "../sass/abstracts/variables";
+
+@import "../sass/base/common";
+@import "../sass/base/typography";
+
+//@import "../sass/components/navbar-link";
+@import "../sass/components/button";
+//@import "../sass/components/card";
+//@import "../sass/components/burger-menu";
+//@import "../sass/components/modal";
+//@import "../sass/components/input";
+
+@import "../sass/layout/header";
+@import "../sass/layout/footer";
+
+@import "../sass/pages/main";
