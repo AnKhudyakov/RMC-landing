@@ -47,6 +47,17 @@
     @media only screen and (max-width: $breakpoints_large) {
       font-size: 14px;
     }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      display: none;
+    }
+  }
+  &__burger {
+    display: none;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      display: block;
+      //transform: scale(0.7);
+      margin-right: 50px;
+    }
   }
   &__button {
     display: flex;
