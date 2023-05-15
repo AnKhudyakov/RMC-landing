@@ -20,7 +20,7 @@ h2 {
   font-size: 60px;
   line-height: 128%;
   @media only screen and (max-width: $breakpoints_tablet) {
-    //font-size: 30px;
+    font-size: 36px;
   }
   @media only screen and (max-width: $breakpoints_mobile) {
     // font-size: 28px;
@@ -58,7 +58,7 @@ h5 {
   text-transform: uppercase;
   color: #ffc978;
   @media only screen and (max-width: $breakpoints_tablet) {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 

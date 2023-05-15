@@ -207,6 +207,11 @@ h2 {
   font-size: 60px;
   line-height: 128%;
 }
+@media only screen and (max-width: 992px) {
+  h2 {
+    font-size: 36px;
+  }
+}
 h3 {
   font-family: "Larken", sans-serif;
   font-style: normal;
@@ -229,7 +234,7 @@ h5 {
 }
 @media only screen and (max-width: 992px) {
   h5 {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -248,13 +253,9 @@ h6 {
 
 .menu__link {
   color: #abaeb7;
-  line-height: 118.75%;
-  font-size: 16px;
-  font-weight: 500;
 }
 @media only screen and (max-width: 1720px) {
   .menu__link {
-    font-size: 14px;
     -moz-column-gap: 30px;
          column-gap: 30px;
   }
@@ -305,7 +306,7 @@ h6 {
   width: 300px;
   height: 500px;
 }
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 992px) {
   .card {
     height: 359px;
   }
@@ -314,6 +315,14 @@ h6 {
 .table {
   border-collapse: collapse;
   text-align: left;
+  width: 100%;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .table {
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
 }
 .table__body {
   font-weight: 400;
@@ -340,18 +349,8 @@ h6 {
   padding: 10px 0;
   padding-right: 60px;
 }
-@media only screen and (max-width: 767px) {
-  .table__head-row th {
-    padding-right: 0px;
-  }
-}
 .table__head-row th:nth-child(1), .table__head-row th:nth-child(2) {
   padding-right: 70px;
-}
-@media only screen and (max-width: 767px) {
-  .table__head-row th:nth-child(1), .table__head-row th:nth-child(2) {
-    padding-right: 0px;
-  }
 }
 .table__head-row th:last-child {
   padding-right: 0;
@@ -365,18 +364,8 @@ h6 {
   padding-right: 70px;
   color: #fff;
 }
-@media only screen and (max-width: 767px) {
-  .table td:nth-child(1) {
-    padding-right: 0px;
-  }
-}
 .table td:nth-child(2) {
   padding-right: 70px;
-}
-@media only screen and (max-width: 767px) {
-  .table td:nth-child(2) {
-    padding-right: 0px;
-  }
 }
 .table td:last-child {
   padding-right: 0;
@@ -390,10 +379,20 @@ h6 {
   width: 2px;
   background: linear-gradient(180deg, rgba(197, 225, 228, 0) 0%, #c5e1e4 51.56%, rgba(197, 225, 228, 0) 100%);
 }
+@media only screen and (max-width: 767px) {
+  .devider-block__devider {
+    display: none;
+  }
+}
 .devider-block__text {
   font-size: 16px;
   padding: 30px 0 30px 30px;
   line-height: 162%;
+}
+@media only screen and (max-width: 767px) {
+  .devider-block__text {
+    padding: 0;
+  }
 }
 
 .text-block {
@@ -507,8 +506,16 @@ h6 {
   }
 }
 .header__menu {
+  line-height: 118.75%;
+  font-size: 16px;
+  font-weight: 500;
   padding: 5px 25px;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1720px) {
+  .header__menu {
+    font-size: 14px;
+  }
 }
 .header__button {
   display: flex;
@@ -520,6 +527,9 @@ h6 {
 }
 .footer__menu {
   text-align: center;
+  line-height: 118.75%;
+  font-size: 16px;
+  font-weight: 500;
 }
 .footer__column:first-child {
   justify-self: flex-start;
@@ -616,6 +626,16 @@ h6 {
 }
 
 .page__project {
+  position: relative;
+  z-index: 2;
+}
+
+.page__team {
+  position: relative;
+  z-index: 2;
+}
+
+.page__image-block {
   position: relative;
   z-index: 2;
 }
@@ -759,6 +779,11 @@ h6 {
 .services__body {
   text-align: center;
 }
+@media only screen and (max-width: 1250px) {
+  .services__body {
+    text-align: left;
+  }
+}
 .services__column {
   display: flex;
   gap: 30px;
@@ -775,6 +800,12 @@ h6 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .services__column {
+    display: flex;
+    flex-direction: column;
   }
 }
 .services__container {
@@ -831,6 +862,12 @@ h6 {
     max-width: 100%;
   }
 }
+@media only screen and (max-width: 767px) {
+  .about__devider-block {
+    padding: 0;
+    margin-left: 0;
+  }
+}
 .about__image-block {
   display: flex;
   justify-content: space-between;
@@ -882,6 +919,11 @@ h6 {
     justify-content: space-around;
   }
 }
+@media only screen and (max-width: 767px) {
+  .about__cards {
+    flex-direction: column;
+  }
+}
 .about__image {
   width: 100%;
   height: 175px;
@@ -889,6 +931,11 @@ h6 {
 @media only screen and (max-width: 1250px) {
   .about__image {
     max-width: 408px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .about__image {
+    display: none;
   }
 }
 .about__subtext {
@@ -916,23 +963,18 @@ h6 {
 .about__title {
   margin-bottom: 18px;
 }
-@media only screen and (max-width: 1250px) {
-  .about__title {
-    text-align: center;
-  }
-}
 
 .project-last__container {
-  padding-top: 112px;
+  padding-top: 140px;
 }
 @media only screen and (max-width: 992px) {
   .project-last__container {
-    padding-top: 52px;
+    padding-top: 80px;
   }
 }
 @media only screen and (max-width: 767px) {
   .project-last__container {
-    padding-top: 12px;
+    padding-top: 40px;
   }
 }
 .project-last__title-block {
@@ -940,6 +982,12 @@ h6 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 100px;
+}
+@media only screen and (max-width: 992px) {
+  .project-last__title-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .project-last__card:nth-child(odd) {
   margin-top: -50px;
@@ -1102,7 +1150,7 @@ h6 {
 .project__content {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 40px 20px;
 }
 @media only screen and (max-width: 1250px) {
   .project__content {
@@ -1129,6 +1177,25 @@ h6 {
 .project__subtitle {
   margin-bottom: 20px;
 }
+.project__table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+.project__table-wrapper::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.project__table-wrapper::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+.project__table-wrapper::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: #0b0e17;
+  border: 1px solid #abaeb7;
+}
+.project__table-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #abaeb7;
+}
 .project__table {
   margin-bottom: 28px;
 }
@@ -1137,11 +1204,17 @@ h6 {
     width: 100%;
   }
 }
+@media only screen and (max-width: 767px) {
+  .project__table {
+    width: 708px;
+  }
+}
 .project__text-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  gap: 20px;
 }
 .team__container {
   padding-top: 140px;

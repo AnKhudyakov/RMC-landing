@@ -43,6 +43,16 @@
   z-index: 2;
 }
 
+.page__team {
+  position: relative;
+  z-index: 2;
+}
+
+.page__image-block {
+  position: relative;
+  z-index: 2;
+}
+
 .main-block {
   &__body {
     position: relative;
@@ -158,6 +168,9 @@
 .services {
   &__body {
     text-align: center;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      text-align: left;
+    }
   }
   &__column {
     display: flex;
@@ -170,6 +183,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-items: center;
+    }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      display: flex;
+      flex-direction: column;
     }
   }
   &__container {
@@ -217,11 +234,14 @@
     @media only screen and (max-width: $breakpoints_desktop) {
       max-width: 100%;
     }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      padding: 0;
+      margin-left: 0;
+    }
   }
   &__image-block {
     display: flex;
     justify-content: space-between;
-    //flex-wrap: wrap;
     @media only screen and (max-width: $breakpoints_desktop) {
       justify-content: space-around;
     }
@@ -261,12 +281,18 @@
       width: 100%;
       justify-content: space-around;
     }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      flex-direction: column;
+    }
   }
   &__image {
     width: 100%;
     height: 175px;
     @media only screen and (max-width: $breakpoints_desktop) {
       max-width: 408px;
+    }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      display: none;
     }
   }
   &__item {
@@ -295,20 +321,17 @@
   }
   &__title {
     margin-bottom: 18px;
-    @media only screen and (max-width: $breakpoints_desktop) {
-      text-align: center;
-    }
   }
 }
 
 .project-last {
   &__container {
-    padding-top: calc($section_gap_desktop - 28px);
+    padding-top: $section_gap_desktop;
     @media only screen and (max-width: $breakpoints_tablet) {
-      padding-top: calc($section_gap_tablet - 28px);
+      padding-top: $section_gap_tablet;
     }
     @media only screen and (max-width: $breakpoints_mobile) {
-      padding-top: calc($section_gap_mobile - 28px);
+      padding-top: $section_gap_mobile;
     }
   }
   &__title-block {
@@ -316,6 +339,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 100px;
+    @media only screen and (max-width: $breakpoints_tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__card {
     &:nth-child(odd) {
@@ -462,7 +489,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 40px 20px;
     @media only screen and (max-width: $breakpoints_desktop) {
       flex-wrap: wrap;
     }
@@ -484,10 +511,36 @@
   &__subtitle {
     margin-bottom: 20px;
   }
+  &__table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      // border: 1px solid #abaeb7;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 3px;
+      background-color: $color_primary;
+      border: 1px solid #abaeb7;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 6px;
+      //border: 2px solid #abaeb7;
+      background-color: #abaeb7;
+    }
+  }
   &__table {
     margin-bottom: 28px;
     @media only screen and (max-width: $breakpoints_desktop) {
       width: 100%;
+    }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      width: 708px;
     }
   }
   &__text-block {
@@ -495,6 +548,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+    gap: 20px;
   }
   &__title {
   }

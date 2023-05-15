@@ -1,27 +1,23 @@
 .menu {
-    &__item {
-    }
-    &__link {
-      color: #abaeb7;
-      line-height: calc(19 / 16 * 100%);
-      font-size: 16px;
-      font-weight: 500;
-      @media only screen and (max-width: $breakpoints_large) {
-        font-size: 14px;
-        column-gap: 30px;
-      }
-    }
-    &__list {
-      width: 100%;
-      display: flex;
-      gap: 15px 35px;
-      flex-wrap: wrap;
-      @media only screen and (max-width: $breakpoints_large) {
-        column-gap: 20px;
-      }
-    }
-    &__list_footer {
-      row-gap: 25px;
-      flex-direction: column;
+  &__item {
+  }
+  &__link {
+    color: #abaeb7;
+    @media only screen and (max-width: $breakpoints_large) {
+      column-gap: 30px;
     }
   }
+  &__list {
+    width: 100%;
+    display: flex;
+    gap: 15px 35px;
+    flex-wrap: wrap;
+    @media only screen and (max-width: $breakpoints_large) {
+      column-gap: 20px;
+    }
+  }
+  &__list_footer {
+    row-gap: 25px;
+    flex-direction: column;
+  }
+}

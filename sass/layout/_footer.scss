@@ -4,6 +4,9 @@
   }
   &__menu {
     text-align: center;
+    line-height: calc(19 / 16 * 100%);
+    font-size: 16px;
+    font-weight: 500;
   }
   &__column {
     &:first-child {

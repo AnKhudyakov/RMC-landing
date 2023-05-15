@@ -1,6 +1,13 @@
 .table {
   border-collapse: collapse;
   text-align: left;
+  width: 100%;
+  position: relative;
+  @media only screen and (max-width: $breakpoints_mobile) {
+    //width: 708px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
   &__body {
     font-weight: 400;
     font-size: 16px;
@@ -32,15 +39,15 @@
     th {
       padding: 10px 0;
       padding-right: 60px;
-      @media only screen and (max-width: $breakpoints_mobile) {
-        padding-right: 0px;
-      }
+      // @media only screen and (max-width: $breakpoints_mobile) {
+      //   padding-right: 0px;
+      // }
       &:nth-child(1),
       &:nth-child(2) {
         padding-right: 70px;
-        @media only screen and (max-width: $breakpoints_mobile) {
-          padding-right: 0px;
-        }
+        // @media only screen and (max-width: $breakpoints_mobile) {
+        //   padding-right: 0px;
+        // }
       }
       &:last-child {
         padding-right: 0;
@@ -54,15 +61,15 @@
     &:nth-child(1) {
       padding-right: 70px;
       color: #fff;
-      @media only screen and (max-width: $breakpoints_mobile) {
-        padding-right: 0px;
-      }
+      // @media only screen and (max-width: $breakpoints_mobile) {
+      //   padding-right: 0px;
+      // }
     }
     &:nth-child(2) {
       padding-right: 70px;
-      @media only screen and (max-width: $breakpoints_mobile) {
-        padding-right: 0px;
-      }
+      // @media only screen and (max-width: $breakpoints_mobile) {
+      //   padding-right: 0px;
+      // }
     }
     &:last-child {
       padding-right: 0;
