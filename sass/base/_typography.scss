@@ -32,20 +32,17 @@ h3 {
   font-style: normal;
   font-size: 48px;
   line-height: calc (62 / 48 * 100%);
-  @media only screen and (max-width: $breakpoints_tablet) {
-    //font-size: 22px;
+  @media only screen and (max-width: $breakpoints_mobile) {
+    font-size: 38px;
   }
 }
 
 h4 {
   font-style: normal;
   font-size: 24px;
-  line-height: 31px;
-  @media only screen and (max-width: $breakpoints_tablet) {
-    //font-size: 18px;
-  }
+  line-height: calc(31 / 24 * 100%);
   @media only screen and (max-width: $breakpoints_mobile) {
-    //font-size: 16px;
+    font-size: 16px;
   }
 }
 
@@ -53,7 +50,7 @@ h5 {
   font-family: "Larken", sans-serif;
   font-style: normal;
   font-size: 16px;
-  line-height: 21px;
+  line-height: calc(21 / 16 * 100%);
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #ffc978;
@@ -67,7 +64,7 @@ h6 {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: calc(19 / 16 * 100%);
   @media only screen and (max-width: $breakpoints_tablet) {
     font-size: 12px;
   }

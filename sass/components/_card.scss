@@ -3,5 +3,9 @@
   height: 500px;
   @media only screen and (max-width: $breakpoints_tablet) {
     height: 359px;
+    width: 250px;
+  }
+  @media only screen and (max-width: $breakpoints_mobile) {
+    height: 280px;
   }
 }

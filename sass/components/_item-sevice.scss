@@ -4,6 +4,7 @@
   max-width: 300px;
   @media only screen and (max-width: $breakpoints_mobile) {
     padding: 250px 30px 30px;
+    max-width: 250px;
   }
   &__subtitle {
     position: relative;

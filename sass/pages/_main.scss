@@ -64,7 +64,7 @@
       padding: 103px 30px 107px $padding_destop;
     }
     @media only screen and (max-width: $breakpoints_tablet) {
-      padding: 83px 30px 87px $padding_tablet;
+      padding: 103px 30px 67px $padding_tablet;
     }
   }
   &__container {
@@ -177,7 +177,6 @@
     gap: 30px;
     @media only screen and (max-width: $breakpoints_large) {
       font-size: 14px;
-      column-gap: 30px;
     }
     @media only screen and (max-width: $breakpoints_desktop) {
       display: grid;
@@ -186,7 +185,9 @@
     }
     @media only screen and (max-width: $breakpoints_mobile) {
       display: flex;
-      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      //flex-direction: column;
     }
   }
   &__container {
@@ -263,26 +264,31 @@
   }
   &__button {
     margin-left: 20px;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      margin-left: 0px;
+    }
   }
   &__card {
-    &:first-child {
-      margin-top: 87px;
-      margin-bottom: -87px;
+    &:last-child {
+      margin-top: -87px;
+      margin-bottom: 87px;
       @media only screen and (max-width: $breakpoints_desktop) {
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-top: -59px;
+        margin-bottom: 59px;
       }
     }
   }
   &__cards {
     display: flex;
     gap: 30px;
+    margin-top: 87px;
     @media only screen and (max-width: $breakpoints_desktop) {
       width: 100%;
       justify-content: space-around;
+      margin-top: 59px;
     }
     @media only screen and (max-width: $breakpoints_mobile) {
-      flex-direction: column;
+      gap: 15px;
     }
   }
   &__image {
@@ -302,7 +308,10 @@
     font-style: normal;
     font-weight: 500;
     font-size: 128px;
-    line-height: 120px;
+    line-height: calc(120 / 128 * 100%);
+    @media only screen and (max-width: $breakpoints_mobile) {
+      font-size: 88px;
+    }
   }
   &__procent {
     font-family: "Larken";
@@ -311,6 +320,9 @@
     font-size: 64px;
     line-height: 128%;
     margin-left: 10px;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      font-size: 44px;
+    }
   }
   &__subtitle {
     max-width: 78px;
@@ -318,6 +330,9 @@
     line-height: 30px;
     margin-left: 44px;
     margin-bottom: 20px;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      margin-bottom: 0px;
+    }
   }
   &__title {
     margin-bottom: 18px;
@@ -326,7 +341,7 @@
 
 .project-last {
   &__container {
-    padding-top: $section_gap_desktop;
+    padding-top: calc($section_gap_desktop - 28px);
     @media only screen and (max-width: $breakpoints_tablet) {
       padding-top: $section_gap_tablet;
     }
@@ -342,6 +357,9 @@
     @media only screen and (max-width: $breakpoints_tablet) {
       flex-direction: column;
       align-items: flex-start;
+    }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      margin-bottom: 40px;
     }
   }
   &__card {
@@ -383,6 +401,9 @@
       align-items: center;
       max-width: 100%;
     }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      gap: 20px;
+    }
   }
   &__body {
     position: relative;
@@ -397,6 +418,10 @@
     }
     @media only screen and (max-width: $breakpoints_desktop) {
       flex-direction: column;
+    }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      padding: 20px $padding_tablet;
+      gap: 40px;
     }
   }
   &__container {
@@ -414,12 +439,19 @@
   &__image {
     max-width: 558px;
     height: 100%;
+    img {
+      @media only screen and (max-width: $breakpoints_mobile) {
+        max-width: 100%;
+        object-fit: contain;
+        object-position: top;
+      }
+    }
   }
   &__text-block {
     width: 100%;
   }
   &__title {
-    line-height: 70px;
+    line-height: calc(70 / 60 * 100%);
   }
   &__background {
     position: absolute;
@@ -549,6 +581,9 @@
     align-items: center;
     margin-bottom: 30px;
     gap: 20px;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      flex-direction: column;
+    }
   }
   &__title {
   }
@@ -586,6 +621,9 @@
     line-height: 28px;
     padding: 30px 0 15px;
     border-bottom: 1px solid rgba(171, 174, 183, 0.3);
+    @media only screen and (max-width: $breakpoints_mobile) {
+      padding: 10px 0 5px;
+    }
   }
   &__rows {
   }
@@ -594,6 +632,9 @@
   }
   &__title {
     margin-bottom: 50px;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      margin-bottom: 20px;
+    }
   }
   &__text {
     font-size: 16px;

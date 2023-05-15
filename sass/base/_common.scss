@@ -118,6 +118,9 @@ body {
   @media only screen and (max-width: $breakpoints_tablet) {
     padding: 0 $padding_tablet;
   }
+  @media only screen and (max-width: $breakpoints_mobile) {
+    padding: 0 $padding_mobile;
+  }
 }
 
 ._container-large {

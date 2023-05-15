@@ -6,6 +6,9 @@
   &__subtitle {
     font-size: 18px;
     line-height: 21px;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      font-size: 14px;
+    }
   }
   &__title {
     font-family: "Larken";
@@ -13,6 +16,10 @@
     font-weight: 500;
     font-size: 64px;
     line-height: 70px;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      font-size: 35px;
+      line-height: 35px;
+    }
   }
   &__percent {
     font-family: "Larken";
@@ -20,5 +27,9 @@
     font-weight: 500;
     font-size: 32px;
     line-height: 70px;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      font-size: 20px;
+      line-height: 35px;
+    }
   }
 }
