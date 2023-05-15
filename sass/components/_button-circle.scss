@@ -1,0 +1,8 @@
+.button-circle {
+  position: relative;
+  &__center {
+    top: calc(50% - 19px);
+    left: calc(50% - 19px);
+    position: absolute;
+  }
+}

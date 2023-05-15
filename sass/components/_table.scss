@@ -1,0 +1,71 @@
+.table {
+  border-collapse: collapse;
+  text-align: left;
+  &__body {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+  }
+  &__body-row {
+    td {
+      padding: 20px 0;
+    }
+    &:first-child {
+      td {
+        padding: 30px 0 20px;
+      }
+    }
+  }
+  &__head {
+    color: #ffb076;
+    font-family: "Larken";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+  }
+  &__link {
+  }
+  &__head-row {
+    th {
+      padding: 10px 0;
+      padding-right: 60px;
+      @media only screen and (max-width: $breakpoints_mobile) {
+        padding-right: 0px;
+      }
+      &:nth-child(1),
+      &:nth-child(2) {
+        padding-right: 70px;
+        @media only screen and (max-width: $breakpoints_mobile) {
+          padding-right: 0px;
+        }
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+  td {
+    border-top: 1px solid #abaeb7;
+    color: #abaeb7;
+    padding-right: 60px;
+    &:nth-child(1) {
+      padding-right: 70px;
+      color: #fff;
+      @media only screen and (max-width: $breakpoints_mobile) {
+        padding-right: 0px;
+      }
+    }
+    &:nth-child(2) {
+      padding-right: 70px;
+      @media only screen and (max-width: $breakpoints_mobile) {
+        padding-right: 0px;
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

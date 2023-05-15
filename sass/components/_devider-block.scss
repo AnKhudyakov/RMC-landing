@@ -1,0 +1,19 @@
+.devider-block {
+    display: flex;
+    &__devider {
+      height: 150px;
+      width: 2px;
+      background: linear-gradient(
+        180deg,
+        rgba(197, 225, 228, 0) 0%,
+        #c5e1e4 51.56%,
+        rgba(197, 225, 228, 0) 100%
+      );
+    }
+    &__text {
+      //max-width: 500px;
+      font-size: 16px;
+      padding: 30px 0 30px 30px;
+      line-height: 162%;
+    }
+  }

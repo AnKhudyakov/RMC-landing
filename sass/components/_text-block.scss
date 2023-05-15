@@ -1,0 +1,24 @@
+.text-block {
+  display: flex;
+  justify-content: space-between;
+  &__content {
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__title {
+    font-family: "Larken";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 70px;
+  }
+  &__percent {
+    font-family: "Larken";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 70px;
+  }
+}

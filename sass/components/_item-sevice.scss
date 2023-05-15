@@ -1,0 +1,26 @@
+.item-service {
+  padding: 391px 30px 30px;
+  text-align: start;
+  max-width: 300px;
+  @media only screen and (max-width: $breakpoints_mobile) {
+    padding: 250px 30px 30px;
+  }
+  &__subtitle {
+    position: relative;
+    z-index: 5;
+  }
+  &__title {
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 5;
+  }
+  &:first-child,
+  &:last-child {
+    margin-top: -129px;
+    margin-bottom: 129px;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
