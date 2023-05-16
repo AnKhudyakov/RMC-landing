@@ -1,12 +1,10 @@
 @import "./variables";
 
 %font-button {
-  
   @media only screen and (max-width: $breakpoints_tablet) {
     font-size: 12px;
   }
 }
-
 
 %container {
   padding: 0 $padding_side;
@@ -20,5 +18,25 @@
   }
   @media only screen and (max-width: $breakpoints_mobile) {
     padding: 0 $padding_mobile;
+  }
+}
+
+%custom-scroll {
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-scrollbar:horizontal {
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: $color_primary;
+    border: 1px solid #abaeb7;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: #abaeb7;
   }
 }

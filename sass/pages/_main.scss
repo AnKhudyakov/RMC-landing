@@ -177,8 +177,15 @@
 }
 
 .services {
+  &__button {
+  
+    @media only screen and (max-width: $breakpoints_desktop) {
+      
+    }
+  }
   &__body {
     text-align: center;
+    position: relative;
     @media only screen and (max-width: $breakpoints_desktop) {
       text-align: left;
     }
@@ -186,18 +193,29 @@
   &__column {
     display: flex;
     gap: 30px;
+    width: 100%;
     @media only screen and (max-width: $breakpoints_large) {
       font-size: 14px;
     }
     @media only screen and (max-width: $breakpoints_desktop) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      justify-items: center;
+      display: none;
+      //width: 100%;
+      //display: grid;
+      //grid-template-columns: 1fr 1fr;
+      //justify-items: center;
     }
-    @media only screen and (max-width: $breakpoints_mobile) {
+    // @media only screen and (max-width: $breakpoints_mobile) {
+    //   display: flex;
+    //   justify-content: space-around;
+    //   flex-wrap: wrap;
+    // }
+  }
+  &__column_slider {
+    display: none;
+    @media only screen and (max-width: $breakpoints_desktop) {
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
     }
   }
   &__container {
@@ -394,6 +412,14 @@
       }
     }
   }
+  &__cards-wrapper {
+    @extend %custom-scroll;
+    width: 100%;
+    padding-bottom: 20px;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      overflow-x: auto;
+    }
+  }
   &__cards {
     display: flex;
     justify-content: space-between;
@@ -401,6 +427,11 @@
     gap: 20px;
     @media only screen and (max-width: $breakpoints_desktop) {
       justify-content: space-around;
+    }
+    @media only screen and (max-width: $breakpoints_desktop) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 100%;
     }
   }
   &__menu {
@@ -576,25 +607,9 @@
     margin-bottom: 20px;
   }
   &__table-wrapper {
+    @extend %custom-scroll;
     width: 100%;
     overflow-x: auto;
-    &::-webkit-scrollbar {
-      -webkit-appearance: none;
-    }
-
-    &::-webkit-scrollbar:horizontal {
-      height: 6px;
-    }
-    &::-webkit-scrollbar-track {
-      border-radius: 3px;
-      background-color: $color_primary;
-      border: 1px solid #abaeb7;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border-radius: 6px;
-      background-color: #abaeb7;
-    }
   }
   &__table {
     margin-bottom: 28px;

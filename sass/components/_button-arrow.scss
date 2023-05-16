@@ -1,0 +1,28 @@
+%button-arrow {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 201, 120, 0.7);
+    z-index: 3;
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(255, 201, 120, 0.5);;
+    }
+}
+
+.button-arrow_left {
+    @extend %button-arrow;
+    left: 30px;
+    @media only screen and (max-width: $breakpoints_mobile) {
+        left: 10px;
+      }
+}
+
+.button-arrow_right {
+    @extend %button-arrow;
+    right: 30px;
+    @media only screen and (max-width: $breakpoints_mobile) {
+        right: 10px;
+      }
+}

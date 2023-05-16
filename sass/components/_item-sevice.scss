@@ -1,10 +1,9 @@
 .item-service {
   padding: 391px 30px 30px;
   text-align: start;
-  max-width: 300px;
-  @media only screen and (max-width: $breakpoints_mobile) {
-    padding: 250px 30px 30px;
-    max-width: 250px;
+  @media only screen and (max-width: $breakpoints_desktop) {
+    padding-top: 500px;
+    width: 100%;
   }
   &__subtitle {
     position: relative;
@@ -15,13 +14,22 @@
     position: relative;
     z-index: 5;
   }
-  &:first-child,
-  &:last-child {
+  &:nth-child(1),
+  &:nth-child(4) {
     margin-top: -129px;
     margin-bottom: 129px;
     @media only screen and (max-width: $breakpoints_desktop) {
       margin-top: 0;
       margin-bottom: 0;
+    }
+  }
+  img {
+    object-position: bottom;
+   
+  }
+  &:nth-child(2) {
+    img {
+      object-position: center;
     }
   }
 }
