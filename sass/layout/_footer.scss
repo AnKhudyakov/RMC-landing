@@ -26,6 +26,7 @@
     gap: 30px 15px;
     margin-bottom: 45px;
     @media only screen and (max-width: $breakpoints_mobile) {
+      justify-items: flex-start;
       grid-template-columns: 1fr 1fr;
       column-gap: 10px;
       margin-bottom: 20px;
@@ -53,7 +54,7 @@
     line-height: 60px;
     margin-bottom: 86px;
     @media only screen and (max-width: $breakpoints_mobile) {
-      margin-bottom: 20px;
+      margin-bottom: 35px;
     }
   }
   &__text {

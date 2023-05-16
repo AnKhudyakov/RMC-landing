@@ -1,4 +1,5 @@
 .menu {
+  font-weight: 500;
   &__item {
   }
   &__link {
@@ -14,6 +15,11 @@
     flex-wrap: wrap;
     @media only screen and (max-width: $breakpoints_large) {
       column-gap: 20px;
+    }
+    @media only screen and (max-width: $breakpoints_tablet) {
+      column-gap: 15px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
     }
   }
   &__list_footer {

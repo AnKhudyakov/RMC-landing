@@ -11,6 +11,7 @@ h1 {
   }
   @media only screen and (max-width: $breakpoints_desktop) {
     font-size: 42px;
+    line-height: 129%;
   }
 }
 
@@ -21,9 +22,6 @@ h2 {
   line-height: 128%;
   @media only screen and (max-width: $breakpoints_tablet) {
     font-size: 36px;
-  }
-  @media only screen and (max-width: $breakpoints_mobile) {
-    // font-size: 28px;
   }
 }
 
@@ -54,9 +52,6 @@ h5 {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #ffc978;
-  @media only screen and (max-width: $breakpoints_tablet) {
-    font-size: 14px;
-  }
 }
 
 h6 {

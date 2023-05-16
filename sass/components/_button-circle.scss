@@ -5,4 +5,7 @@
     left: calc(50% - 19px);
     position: absolute;
   }
+  @media only screen and (max-width: $breakpoints_desktop) {
+    display: none;
+  }
 }

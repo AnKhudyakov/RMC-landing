@@ -58,13 +58,16 @@
     position: relative;
     padding: 273px 69px 277px $padding_side;
     @media only screen and (max-width: $breakpoints_large) {
-      padding: 143px 30px 147px $padding_destop;
+      padding: 147px 30px $padding_destop;
     }
     @media only screen and (max-width: $breakpoints_desktop) {
-      padding: 103px 30px 107px $padding_destop;
+      padding: 147px 30px 107px $padding_destop;
     }
     @media only screen and (max-width: $breakpoints_tablet) {
-      padding: 103px 30px 67px $padding_tablet;
+      padding: 147px $padding_tablet 58px;
+    }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      padding: 147px $padding_mobile 58px;
     }
   }
   &__container {
@@ -76,12 +79,18 @@
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
     }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      display: block;
+    }
   }
   &__image {
     position: relative;
     width: 100%;
     height: 100%;
     z-index: 5;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      height: 95vw;
+    }
     img {
       position: absolute;
       width: 100%;
@@ -90,6 +99,10 @@
       left: 0;
       object-fit: cover;
       object-position: left;
+      @media only screen and (max-width: $breakpoints_mobile) {
+        object-position: top;
+        object-fit: contain;
+      }
     }
   }
   &__background {
@@ -150,11 +163,9 @@
     color: #abaeb7;
     z-index: 5;
     @media only screen and (max-width: $breakpoints_desktop) {
-      font-size: 18px;
       margin-bottom: 30px;
     }
     @media only screen and (max-width: $breakpoints_tablet) {
-      font-size: 16px;
       margin-bottom: 20px;
     }
   }
@@ -187,7 +198,6 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      //flex-direction: column;
     }
   }
   &__container {
@@ -224,7 +234,6 @@
     align-items: flex-end;
     margin-bottom: 15px;
     @media only screen and (max-width: $breakpoints_desktop) {
-      justify-content: center;
     }
   }
   &__devider-block {
@@ -243,9 +252,6 @@
   &__image-block {
     display: flex;
     justify-content: space-between;
-    @media only screen and (max-width: $breakpoints_desktop) {
-      justify-content: space-around;
-    }
   }
   &__content {
     max-width: 630px;
@@ -269,12 +275,26 @@
     }
   }
   &__card {
+    width: 100%;
+    min-width: 300px;
+    height: 500px;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      min-width: 0;
+      height: 50vw;
+    }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      height: 60vw;
+    }
     &:last-child {
       margin-top: -87px;
       margin-bottom: 87px;
       @media only screen and (max-width: $breakpoints_desktop) {
         margin-top: -59px;
         margin-bottom: 59px;
+      }
+      @media only screen and (max-width: $breakpoints_mobile) {
+        margin-top: -49px;
+        margin-bottom: 49px;
       }
     }
   }
@@ -294,11 +314,12 @@
   &__image {
     width: 100%;
     height: 175px;
-    @media only screen and (max-width: $breakpoints_desktop) {
-      max-width: 408px;
+    img {
+      object-position: center 43%;
     }
-    @media only screen and (max-width: $breakpoints_mobile) {
-      display: none;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      max-width: 100%;
+      height: 40vw;
     }
   }
   &__item {
@@ -354,6 +375,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 100px;
+    column-gap: 20px;
     @media only screen and (max-width: $breakpoints_tablet) {
       flex-direction: column;
       align-items: flex-start;
@@ -382,11 +404,17 @@
     }
   }
   &__menu {
+    @media only screen and (max-width: $breakpoints_tablet) {
+      width: 100%;
+    }
   }
   &__subtitle {
     margin-bottom: 15px;
   }
   &__title {
+    @media only screen and (max-width: $breakpoints_tablet) {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -398,7 +426,6 @@
     flex-direction: column;
     gap: 50px;
     @media only screen and (max-width: $breakpoints_desktop) {
-      align-items: center;
       max-width: 100%;
     }
     @media only screen and (max-width: $breakpoints_mobile) {
@@ -417,10 +444,11 @@
       gap: 80px;
     }
     @media only screen and (max-width: $breakpoints_desktop) {
+      align-items: flex-start;
       flex-direction: column;
     }
     @media only screen and (max-width: $breakpoints_mobile) {
-      padding: 20px $padding_tablet;
+      padding: 20px $padding_mobile;
       gap: 40px;
     }
   }
@@ -437,8 +465,12 @@
     }
   }
   &__image {
+    align-self: center;
     max-width: 558px;
     height: 100%;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      order: 2;
+    }
     img {
       @media only screen and (max-width: $breakpoints_mobile) {
         max-width: 100%;
@@ -548,7 +580,6 @@
     overflow-x: auto;
     &::-webkit-scrollbar {
       -webkit-appearance: none;
-      // border: 1px solid #abaeb7;
     }
 
     &::-webkit-scrollbar:horizontal {
@@ -562,7 +593,6 @@
 
     &::-webkit-scrollbar-thumb {
       border-radius: 6px;
-      //border: 2px solid #abaeb7;
       background-color: #abaeb7;
     }
   }
@@ -578,7 +608,6 @@
   &__text-block {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 30px;
     gap: 20px;
     @media only screen and (max-width: $breakpoints_mobile) {

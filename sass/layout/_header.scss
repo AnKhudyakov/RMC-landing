@@ -35,7 +35,7 @@
       font-size: 30px;
     }
     @media only screen and (max-width: $breakpoints_tablet) {
-      font-size: 24px;
+      font-size: 35px;
     }
   }
   &__menu {
@@ -55,12 +55,14 @@
     display: none;
     @media only screen and (max-width: $breakpoints_mobile) {
       display: block;
-      //transform: scale(0.7);
-      margin-right: 50px;
+      margin-top: 2px;
     }
   }
   &__button {
     display: flex;
     justify-content: flex-end;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      display: none;
+    }
   }
 }

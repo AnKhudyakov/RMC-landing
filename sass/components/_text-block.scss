@@ -17,8 +17,7 @@
     font-size: 64px;
     line-height: 70px;
     @media only screen and (max-width: $breakpoints_mobile) {
-      font-size: 35px;
-      line-height: 35px;
+      font-size: 44px;
     }
   }
   &__percent {
@@ -27,9 +26,5 @@
     font-weight: 500;
     font-size: 32px;
     line-height: 70px;
-    @media only screen and (max-width: $breakpoints_mobile) {
-      font-size: 20px;
-      line-height: 35px;
-    }
   }
 }

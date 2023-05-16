@@ -87,7 +87,6 @@ html {
 /* set basic config for body */
 html,
 body {
-  //background-color: #181818;
   height: 100%;
   text-rendering: optimizeSpeed;
   line-height: 1;
@@ -96,7 +95,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   background: $color_primary;
-  //background-blend-mode:lighten;
 }
 /* -------------------------------------- */
 .wrapper {
