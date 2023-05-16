@@ -24,12 +24,16 @@
     }
   }
   img {
-    object-position: bottom;
-   
+    object-position: center;
   }
-  &:nth-child(2) {
+  &:nth-child(3) {
     img {
-      object-position: center;
+      object-position: center 90% ;
+    }
+  }
+  &:nth-child(5) {
+    img {
+      object-position: center 35% ;
     }
   }
 }

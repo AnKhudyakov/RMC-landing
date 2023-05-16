@@ -35,18 +35,18 @@
   }
 }
 
-.project__table-wrapper::-webkit-scrollbar, .project-last__cards-wrapper::-webkit-scrollbar {
+.image-block__wrapper::-webkit-scrollbar, .project__table-wrapper::-webkit-scrollbar, .project-last__cards-wrapper::-webkit-scrollbar {
   -webkit-appearance: none;
 }
-.project__table-wrapper::-webkit-scrollbar:horizontal, .project-last__cards-wrapper::-webkit-scrollbar:horizontal {
+.image-block__wrapper::-webkit-scrollbar:horizontal, .project__table-wrapper::-webkit-scrollbar:horizontal, .project-last__cards-wrapper::-webkit-scrollbar:horizontal {
   height: 6px;
 }
-.project__table-wrapper::-webkit-scrollbar-track, .project-last__cards-wrapper::-webkit-scrollbar-track {
+.image-block__wrapper::-webkit-scrollbar-track, .project__table-wrapper::-webkit-scrollbar-track, .project-last__cards-wrapper::-webkit-scrollbar-track {
   border-radius: 3px;
   background-color: #0b0e17;
   border: 1px solid #abaeb7;
 }
-.project__table-wrapper::-webkit-scrollbar-thumb, .project-last__cards-wrapper::-webkit-scrollbar-thumb {
+.image-block__wrapper::-webkit-scrollbar-thumb, .project__table-wrapper::-webkit-scrollbar-thumb, .project-last__cards-wrapper::-webkit-scrollbar-thumb {
   border-radius: 6px;
   background-color: #abaeb7;
 }
@@ -573,12 +573,16 @@ h6 {
   }
 }
 .item-service img {
-  -o-object-position: bottom;
-     object-position: bottom;
-}
-.item-service:nth-child(2) img {
   -o-object-position: center;
      object-position: center;
+}
+.item-service:nth-child(3) img {
+  -o-object-position: center 90%;
+     object-position: center 90%;
+}
+.item-service:nth-child(5) img {
+  -o-object-position: center 35%;
+     object-position: center 35%;
 }
 
 .burger {
@@ -870,7 +874,19 @@ h6 {
 
 .page__image-block {
   position: relative;
+  overflow-x: hidden;
+  padding: 0 60px;
   z-index: 2;
+}
+@media only screen and (max-width: 992px) {
+  .page__image-block {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .page__image-block {
+    padding: 0 20px;
+  }
 }
 
 .main-block__body {
@@ -1614,11 +1630,15 @@ h6 {
 }
 
 .image-block__container {
-  padding: 0 20px;
+  width: 100%;
   display: flex;
   padding-top: 140px;
   justify-content: center;
-  flex-wrap: wrap;
+}
+@media only screen and (max-width: 1250px) {
+  .image-block__container {
+    justify-content: flex-start;
+  }
 }
 @media only screen and (max-width: 992px) {
   .image-block__container {
@@ -1630,7 +1650,17 @@ h6 {
     padding-top: 50px;
   }
 }
+.image-block__wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
 .image-block__image {
-  width: 258px;
+  max-width: 258px;
+  min-width: 240px;
+  width: 100%;
   height: 350px;
+}
+.image-block__image img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=styles.css.map */

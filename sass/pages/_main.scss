@@ -50,7 +50,15 @@
 
 .page__image-block {
   position: relative;
+  overflow-x: hidden;
+  padding: 0 $padding_destop;
   z-index: 2;
+  @media only screen and (max-width: $breakpoints_tablet) {
+    padding: 0 $padding_tablet;
+  }
+  @media only screen and (max-width: $breakpoints_mobile) {
+    padding: 0 $padding_mobile;
+  }
 }
 
 .main-block {
@@ -178,9 +186,7 @@
 
 .services {
   &__button {
-  
     @media only screen and (max-width: $breakpoints_desktop) {
-      
     }
   }
   &__body {
@@ -199,16 +205,7 @@
     }
     @media only screen and (max-width: $breakpoints_desktop) {
       display: none;
-      //width: 100%;
-      //display: grid;
-      //grid-template-columns: 1fr 1fr;
-      //justify-items: center;
     }
-    // @media only screen and (max-width: $breakpoints_mobile) {
-    //   display: flex;
-    //   justify-content: space-around;
-    //   flex-wrap: wrap;
-    // }
   }
   &__column_slider {
     display: none;
@@ -689,11 +686,14 @@
 
 .image-block {
   &__container {
-    padding: 0 20px;
+    width: 100%;
     display: flex;
     padding-top: $section_gap_desktop;
     justify-content: center;
-    flex-wrap: wrap;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      justify-content: flex-start;
+    }
+
     @media only screen and (max-width: $breakpoints_tablet) {
       padding-top: $section_gap_tablet;
     }
@@ -701,8 +701,19 @@
       padding-top: $section_gap_mobile;
     }
   }
+  &__wrapper {
+    width: 100%;
+    @extend %custom-scroll;
+    overflow-x: auto;
+  }
   &__image {
-    width: 258px;
+    max-width: 258px;
+    min-width: 240px;
+    width: 100%;
     height: 350px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
