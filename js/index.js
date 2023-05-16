@@ -1,3 +1,4 @@
+//Slider
 let slideIndex = 1;
 showDivs(slideIndex);
 
@@ -18,3 +19,13 @@ function showDivs(n) {
   }
   x[slideIndex - 1].style.display = "block";
 }
+
+
+//Burger Menu
+const burgerMenuButton = document.querySelector("#burger-button");
+const navigationMenu = document.querySelector(".header__burger-menu");
+
+burgerMenuButton.addEventListener("click", () => {
+  burgerMenuButton.classList.toggle("open");
+  navigationMenu.classList.toggle("open");
+});

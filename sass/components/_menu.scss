@@ -1,9 +1,11 @@
 .menu {
   font-weight: 500;
-  &__item {
-  }
   &__link {
     color: #abaeb7;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #ffc978;
+    }
     @media only screen and (max-width: $breakpoints_large) {
       column-gap: 30px;
     }
@@ -25,5 +27,14 @@
   &__list_footer {
     row-gap: 25px;
     flex-direction: column;
+  }
+  &__list_burger {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    row-gap: 40px;
+    font-size: 18px;
+    list-style-type: none;
+    align-items: center;
   }
 }
