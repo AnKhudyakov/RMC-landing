@@ -3,6 +3,7 @@
   width: 100%;
   top: 0;
   left: 0;
+  background-color: rgba(11, 14, 23,0.7);
   z-index: 50;
   &__container {
     @extend %container;
@@ -14,8 +15,7 @@
     grid-template-columns: 1fr calc(1071 / 1920 * 100%);
     gap: 12px;
     @media only screen and (max-width: $breakpoints_desktop) {
-      display: flex;
-      justify-content: space-between;
+     display: flex;
     }
   }
   &__body {
@@ -23,6 +23,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      gap: 40px;
+      justify-content: flex-start;
+     }
+     @media only screen and (max-width: $breakpoints_mobile) {
+      justify-content: space-between;
+     }
   }
   &__logo {
     font-size: 50px;

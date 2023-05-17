@@ -323,7 +323,6 @@ h6 {
   width: 100%;
   display: flex;
   gap: 15px 35px;
-  flex-wrap: wrap;
 }
 @media only screen and (max-width: 1720px) {
   .menu__list {
@@ -708,6 +707,16 @@ h6 {
   }
 }
 
+.burger-icon__wrapper.open + .burger-icon__menu-icon {
+  transform: translateY(3px) rotate(45deg);
+}
+.burger-icon__wrapper.open + .burger-icon__menu-icon::before {
+  transform: translate(-7px) rotate(90deg);
+}
+.burger-icon__wrapper.open + .burger-icon__menu-icon::after {
+  transform: translate(-7px, -3px) rotate(180deg);
+}
+
 .modal {
   width: 100%;
   height: 100%;
@@ -819,6 +828,7 @@ h6 {
   width: 100%;
   top: 0;
   left: 0;
+  background-color: rgba(11, 14, 23, 0.7);
   z-index: 50;
 }
 .header__container {
@@ -833,7 +843,6 @@ h6 {
 @media only screen and (max-width: 1250px) {
   .header__container {
     display: flex;
-    justify-content: space-between;
   }
 }
 .header__body {
@@ -841,6 +850,17 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 1250px) {
+  .header__body {
+    gap: 40px;
+    justify-content: flex-start;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header__body {
+    justify-content: space-between;
+  }
 }
 .header__logo {
   font-size: 50px;
@@ -1183,6 +1203,11 @@ h6 {
   bottom: 111px;
   right: -40px;
 }
+@media only screen and (max-width: 992px) {
+  .main-block__background img {
+    bottom: -50px;
+  }
+}
 .main-block__background-text {
   position: absolute;
   left: 0;
@@ -1206,9 +1231,10 @@ h6 {
 }
 @media only screen and (max-width: 992px) {
   .main-block__background-text {
-    right: 0;
+    font-size: 88px;
+    right: 10px;
     left: auto;
-    top: 0;
+    top: 70px;
     width: -moz-fit-content;
     width: fit-content;
     height: -moz-fit-content;
