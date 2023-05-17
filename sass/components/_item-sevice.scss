@@ -5,6 +5,9 @@
     padding-top: 500px;
     width: 100%;
   }
+  @media only screen and (max-width: $breakpoints_mobile) {
+    padding: calc(90vh - 90px) 30px 30px;
+   }
   &__subtitle {
     position: relative;
     z-index: 5;

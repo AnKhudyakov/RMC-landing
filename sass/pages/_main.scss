@@ -61,6 +61,14 @@
   }
 }
 
+.page__modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
 .main-block {
   &__body {
     position: relative;
@@ -224,7 +232,10 @@
       padding-top: $section_gap_mobile;
     }
   }
-  &__item {
+  &__item_slider {
+    @media only screen and (max-width: $breakpoints_mobile) {
+      height: 90vh;
+    }
   }
   &__subtitle {
     margin-bottom: 13px;
@@ -336,8 +347,6 @@
       max-width: 100%;
       height: 40vw;
     }
-  }
-  &__item {
   }
   &__subtext {
     font-family: "Larken";
@@ -567,8 +576,6 @@
 }
 
 .project {
-  &__body {
-  }
   &__container {
     padding-top: $section_gap_desktop;
     @media only screen and (max-width: $breakpoints_tablet) {
@@ -626,15 +633,9 @@
       flex-direction: column;
     }
   }
-  &__title {
-  }
-  &__title-block {
-  }
 }
 
 .team {
-  &__body {
-  }
   &__container {
     padding-top: $section_gap_desktop;
     @media only screen and (max-width: $breakpoints_tablet) {
@@ -665,8 +666,6 @@
     @media only screen and (max-width: $breakpoints_mobile) {
       padding: 10px 0 5px;
     }
-  }
-  &__rows {
   }
   &__subtitle {
     margin-bottom: 20px;
@@ -708,12 +707,24 @@
   }
   &__image {
     max-width: 258px;
-    min-width: 240px;
+    min-width: 225px;
     width: 100%;
     height: 350px;
+    @media only screen and (max-width: $breakpoints_desktop) {
+      min-width: calc((100vw - 2*$padding_destop)/3);
+    }
+    @media only screen and (max-width: $breakpoints_tablet) {
+      min-width: calc((100vw - 2*$padding_tablet)/3);
+    }
+    @media only screen and (max-width: $breakpoints_mobile) {
+      min-width: calc(50vw - $padding_mobile);
+      height: 300px;
+    }
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      object-position: bottom;
     }
   }
 }

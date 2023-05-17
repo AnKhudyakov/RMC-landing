@@ -1,0 +1,41 @@
+.input {
+  width: 458px;
+  padding: 15px;
+  padding-right: 130px;
+  font-size: 16px;
+  background-color: transparent;
+  //border-radius: 12px;
+  z-index: 1;
+  outline: none;
+  color: #abaeb7;
+  border-bottom: 1px solid #abaeb7;
+  transition: all 0.3s ease-in-out;
+ &::placeholder{
+  color:#abaeb7;
+  &:focus {
+    color:#ffc978;
+  }
+ }
+  &:active,
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid #abaeb7;
+    //border: 1px solid $color-dark-m;
+  }
+  &:focus {
+    border-bottom: 1px solid #ffc978;
+  }
+
+  @media only screen and (max-width: $breakpoints_desktop) {
+    width: 400px;
+  }
+  @media only screen and (max-width: $breakpoints_tablet) {
+    top: 0;
+    width: 340px;
+    padding-right: 110px;
+  }
+  @media only screen and (max-width: $breakpoints_mobile) {
+    width: 260px;
+    padding: 5px 85px 5px 10px;
+  }
+}

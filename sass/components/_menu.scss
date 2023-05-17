@@ -1,14 +1,33 @@
 .menu {
   font-weight: 500;
   &__link {
-    color: #abaeb7;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      color: #ffc978;
-    }
     @media only screen and (max-width: $breakpoints_large) {
       column-gap: 30px;
     }
+  }
+  &__item {
+    @media only screen and (max-width: $breakpoints_mobile) {
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+      color: #abaeb7;
+      &:hover {
+        cursor: pointer;
+        color: #ffc978;
+      }
+    }
+  }
+  &__item_burger {
+    padding: 20px;
+    width: 50%;
+    border-bottom: 1px solid #abaeb7;
+    &:hover {
+      border-bottom: 1px solid #ffc978;
+    }
+  }
+  &__link_burger {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   &__list {
     width: 100%;
@@ -30,11 +49,13 @@
   }
   &__list_burger {
     display: flex;
+    height: 100%;
     flex-direction: column;
     padding: 40px;
     row-gap: 40px;
     font-size: 18px;
     list-style-type: none;
     align-items: center;
+    justify-content: space-between;
   }
 }

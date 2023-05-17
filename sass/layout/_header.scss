@@ -53,22 +53,29 @@
   }
   &__burger-icon {
     display: none;
+    position: relative;
+    z-index: 30;
     @media only screen and (max-width: $breakpoints_mobile) {
       display: block;
       margin-top: 2px;
     }
   }
   &__burger-menu {
+    display: none;
     position: fixed;
-    top: 90px;
+    top: 0px;
     right: -100%;
     width: 100%;
+    height: 100vh;
     background-color: $color_primary;
     padding: 70px 30px;
     text-transform: uppercase;
-    border: 2px solid grey;
-    z-index: 9999;
+    border: 1px solid grey;
+    z-index: 20;
     transition: right 0.5s ease-in-out;
+    @media only screen and (max-width: $breakpoints_mobile) {
+      display: block;
+    }
     &.open {
       right: 0;
     }

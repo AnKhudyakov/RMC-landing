@@ -37,17 +37,28 @@
             </div>
             <nav class="header__burger-menu menu">
               <ul class="menu__list menu__list_burger">
-                <li class="menu__item">
-                  <a href="#services" class="menu__link">THE STUDIO</a>
+                <li class="menu__item menu__item_burger">
+                  <a href="#services" class="menu__link menu__link_burger"
+                    >THE STUDIO</a
+                  >
                 </li>
-                <li class="menu__item">
-                  <a href="#project" class="menu__link">pROJECTS</a>
+                <li class="menu__item menu__item_burger">
+                  <a href="#project" class="menu__link menu__link_burger"
+                    >pROJECTS</a
+                  >
                 </li>
-                <li class="menu__item">
-                  <a href="#expirience" class="menu__link">architecture</a>
+                <li class="menu__item menu__item_burger">
+                  <a href="#expirience" class="menu__link menu__link_burger"
+                    >architecture</a
+                  >
                 </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__link">Blog</a>
+                <li class="menu__item menu__item_burger">
+                  <a href="#" class="menu__link menu__link_burger">Blog</a>
+                </li>
+                <li class="menu__item menu__item_burger">
+                  <a href="#contact" class="menu__link menu__link_burger"
+                    >Contact</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -72,7 +83,7 @@
                 tomorrow. Because small details make the perfect design. Helping
                 you choose between good and best.
               </p>
-              <a href="" class="button button_large">Let’s Work Together</a>
+              <button class="button button_large" id="modal-button">Let’s Work Together</button>
             </div>
             <div class="main-block__image">
               <img src="../assets/images/start.jpg" alt="Interior" />
@@ -302,7 +313,7 @@
                     <div class="text-block__subtitle">Interior Design</div>
                   </div>
                 </div>
-                <a href="" class="button button_large">Let’s Work Together</a>
+                <button class="button button_large" id="modal-button">Let’s Work Together</button>
               </div>
             </div>
             <div class="expirience__background-image">
@@ -450,6 +461,33 @@
                 <img src="../assets/images/bottom5.png" alt="interior" />
               </div>
             </div>
+          </div>
+        </section>
+        <section class="page__modal modal">
+          <div class="modal__container _container">
+            <h4 class="modal__title">
+              You can fill out the form below and one of our team members will
+              get back to you as soon as possible.
+            </h4>
+            <form class="contact__form form" id="submit">
+              <input
+                type="text"
+                name="fullname"
+                placeholder="Full Name"
+                class="form__input input"
+              />
+              <input
+                type="text"
+                name="Email"
+                placeholder="E-mail"
+                class="form__input input"
+              />
+              <div class="form__button-block">
+                <button type="submit" class="form__button button" id="close-button">
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
         </section>
         <div class="page__background"></div>
