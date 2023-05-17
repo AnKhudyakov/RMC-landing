@@ -6,7 +6,6 @@
     }
   }
   &__item {
-    @media only screen and (max-width: $breakpoints_mobile) {
       text-align: center;
       transition: all 0.3s ease-in-out;
       color: #abaeb7;
@@ -14,7 +13,6 @@
         cursor: pointer;
         color: #ffc978;
       }
-    }
   }
   &__item_burger {
     padding: 20px;

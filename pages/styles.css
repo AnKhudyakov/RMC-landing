@@ -295,16 +295,14 @@ h6 {
          column-gap: 30px;
   }
 }
-@media only screen and (max-width: 767px) {
-  .menu__item {
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    color: #abaeb7;
-  }
-  .menu__item:hover {
-    cursor: pointer;
-    color: #ffc978;
-  }
+.menu__item {
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  color: #abaeb7;
+}
+.menu__item:hover {
+  cursor: pointer;
+  color: #ffc978;
 }
 .menu__item_burger {
   padding: 20px;
