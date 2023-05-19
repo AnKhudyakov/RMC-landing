@@ -74,7 +74,7 @@
     position: relative;
     padding: 273px 69px 277px $padding_side;
     @media only screen and (max-width: $breakpoints_large) {
-      padding: 147px 30px $padding_destop;
+      padding: 147px 30px 100px $padding_destop;
     }
     @media only screen and (max-width: $breakpoints_desktop) {
       padding: 147px 30px 107px $padding_destop;
@@ -180,7 +180,7 @@
     font-size: 20px;
     line-height: 165%;
     margin-bottom: 50px;
-    color: #abaeb7;
+    color: $color_text;
     z-index: 5;
     @media only screen and (max-width: $breakpoints_desktop) {
       margin-bottom: 30px;
@@ -282,6 +282,7 @@
   &__image-block {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
   &__content {
     max-width: 630px;
@@ -299,7 +300,8 @@
     }
   }
   &__button {
-    margin-left: 20px;
+    margin-left: 53px;
+    margin-right: 20px;
     @media only screen and (max-width: $breakpoints_mobile) {
       margin-left: 0px;
     }
@@ -549,7 +551,7 @@
     right: 0;
     width: 100%;
     height: calc(100% - $section_gap_desktop);
-    background: #0b0e17;
+    background: $color_primary;
     z-index: 2;
     @media only screen and (max-width: $breakpoints_tablet) {
       top: $section_gap_tablet;
@@ -715,10 +717,10 @@
     width: 100%;
     height: 350px;
     @media only screen and (max-width: $breakpoints_desktop) {
-      min-width: calc((100vw - 2*$padding_destop)/3);
+      min-width: calc((100vw - 2 * $padding_destop) / 3);
     }
     @media only screen and (max-width: $breakpoints_tablet) {
-      min-width: calc((100vw - 2*$padding_tablet)/3);
+      min-width: calc((100vw - 2 * $padding_tablet) / 3);
     }
     @media only screen and (max-width: $breakpoints_mobile) {
       min-width: calc(50vw - $padding_mobile);

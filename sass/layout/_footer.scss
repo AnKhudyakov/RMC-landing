@@ -9,14 +9,13 @@
     font-weight: 500;
   }
   &__column {
-    &:first-child {   
-    justify-self: flex-start;
-    @media only screen and (max-width: $breakpoints_mobile) {
-      grid-column-start: 1;
-      grid-column-end: 3;
+    &:first-child {
+      justify-self: flex-start;
+      @media only screen and (max-width: $breakpoints_mobile) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
     }
-    }
-    
   }
   &__columns {
     position: relative;
@@ -41,11 +40,11 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 22px;
-    color: #abaeb7;
+    color: $color_text;
     border-top: 1px solid #2e313a;
   }
   &__link {
-    color: rgba(255, 176, 119, 1);
+    color: #ffb077;
   }
   &__logo {
     font-size: 65px;
@@ -73,7 +72,7 @@
     max-width: 271px;
     font-size: 18px;
     line-height: 156%;
-    color: #abaeb7;
+    color: $color_text;
     margin-bottom: 30px;
     @media only screen and (max-width: $breakpoints_mobile) {
       font-size: 14px;
@@ -85,10 +84,11 @@
     background: linear-gradient(
       180deg,
       rgba(171, 174, 183, 0) 0%,
-      #abaeb7 51.56%,
+      $color_text 51.56%,
       rgba(171, 174, 183, 0) 100%
     );
-    &:nth-child(2),&:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(4) {
       @media only screen and (max-width: $breakpoints_mobile) {
         display: none;
       }

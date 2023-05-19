@@ -32,11 +32,11 @@
   &::-webkit-scrollbar-track {
     border-radius: 3px;
     background-color: $color_primary;
-    border: 1px solid #abaeb7;
+    border: 1px solid $color_text;
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: 6px;
-    background-color: #abaeb7;
+    background-color: $color_text;
   }
 }

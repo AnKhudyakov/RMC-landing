@@ -8,7 +8,7 @@
     display: block;
     width: 24px;
     height: 3px;
-    background-color: #fff;
+    background-color: $color_secondary;
     margin: 6px;
     border-radius: 2px;
     transition: transform 0.3s ease-in-out;
@@ -20,7 +20,7 @@
       width: 30px;
       height: 3px;
       border-radius: 2px;
-      background-color: #fff;
+      background-color: $color_secondary;
       transition: transform 0.3s ease-in-out;
     }
 
@@ -56,13 +56,13 @@
 
       &:active,
       &.burger_wrapper--transparent:active {
-        background-color: #181818;
+        background-color: rgb(255, 201, 120, 0.1);
       }
     }
   }
 }
 
-.burger-icon__wrapper.open + .burger-icon__menu-icon {
+.burger-icon__wrapper.burger-icon_open + .burger-icon__menu-icon {
   transform: translateY(3px) rotate(45deg);
   &::before {
     transform: translate(-7px) rotate(90deg);

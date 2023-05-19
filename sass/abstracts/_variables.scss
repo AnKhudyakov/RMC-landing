@@ -1,7 +1,8 @@
-$color_text: #c4c4c4;
+$color_text: #abaeb7;
 
-$color_primary: #0b0e17;;
-$color_secondary: #000000;
+$color_primary: #0b0e17;
+$color_secondary: #ffffff;
+$color_accient: #ffc978;
 
 $content_width_large: 1720px;
 $content_width: 1290px;
@@ -16,8 +17,8 @@ $padding_destop: 60px;
 $padding_tablet: 30px;
 $padding_mobile: 20px;
 $section_gap_desktop: 140px;
-$section_gap_tablet:80px;
-$section_gap_mobile:50px;
+$section_gap_tablet: 80px;
+$section_gap_mobile: 50px;
 
 //Animation
 @-webkit-keyframes fadeIn {

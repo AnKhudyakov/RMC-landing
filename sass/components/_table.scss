@@ -39,6 +39,13 @@
     letter-spacing: 0.05em;
   }
   &__link {
+    background-color: transparent;
+    color: $color_text;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      color: $color_accient;
+    }
   }
   &__head-row {
     th {
@@ -60,12 +67,12 @@
     }
   }
   td {
-    border-top: 1px solid #abaeb7;
-    color: #abaeb7;
+    border-top: 1px solid $color_text;
+    color: $color_text;
     padding-right: 60px;
     &:nth-child(1) {
       padding-right: 70px;
-      color: #fff;
+      color: $color_secondary;
     }
     &:nth-child(2) {
       padding-right: 70px;

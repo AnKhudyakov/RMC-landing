@@ -154,7 +154,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1;
   font-size: 16px;
-  color: #fff;
+  color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   background: #0b0e17;
@@ -312,10 +312,21 @@ h6 {
 .menu__item_burger:hover {
   border-bottom: 1px solid #ffc978;
 }
+.menu__link {
+  color: inherit;
+  background-color: transparent;
+}
+.menu__link:hover {
+  cursor: pointer;
+}
 .menu__link_burger {
   display: block;
   width: 100%;
   height: 100%;
+}
+.menu__link_active {
+  color: #ffc978;
+  text-decoration: underline;
 }
 .menu__list {
   width: 100%;
@@ -350,6 +361,13 @@ h6 {
   list-style-type: none;
   align-items: center;
   justify-content: space-between;
+}
+@media only screen and (max-width: 992px) {
+  .menu__list_project {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    justify-content: flex-start;
+  }
 }
 
 .button {
@@ -399,19 +417,13 @@ h6 {
 }
 @media only screen and (max-width: 992px) {
   .card {
-    min-width: calc(50vw - 30px);
+    min-width: calc(50vw - 30px - 10px);
     height: 500px;
   }
 }
 @media only screen and (max-width: 767px) {
   .card {
-    min-width: calc(100vw - 20px);
-  }
-}
-@media only screen and (max-width: 767px) {
-  .card:first-child img {
-    -o-object-position: center 90%;
-       object-position: center 90%;
+    min-width: calc(100vw - 40px);
   }
 }
 .card img {
@@ -419,6 +431,9 @@ h6 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.card_hide {
+  display: none;
 }
 
 .table {
@@ -464,6 +479,15 @@ h6 {
   line-height: 21px;
   letter-spacing: 0.05em;
 }
+.table__link {
+  background-color: transparent;
+  color: #abaeb7;
+  transition: all 0.3s ease-in-out;
+}
+.table__link:hover {
+  cursor: pointer;
+  color: #ffc978;
+}
 .table__head-row th {
   padding: 10px 0;
   padding-right: 60px;
@@ -491,7 +515,7 @@ h6 {
 }
 .table td:nth-child(1) {
   padding-right: 70px;
-  color: #fff;
+  color: #ffffff;
 }
 .table td:nth-child(2) {
   padding-right: 70px;
@@ -559,11 +583,24 @@ h6 {
 
 .button-circle {
   position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .button-circle__center {
   top: calc(50% - 19px);
   left: calc(50% - 19px);
   position: absolute;
+}
+.button-circle__image {
+  width: 150px;
+  height: 150px;
+  transition: all 0.3s ease-in-out;
+  background: no-repeat 50% 50% url(../assets/images/readmore.svg);
+}
+.button-circle__image:hover {
+  background: no-repeat 50% 50% url(../assets/images/readmore-fill.svg);
 }
 @media only screen and (max-width: 1250px) {
   .button-circle {
@@ -660,7 +697,7 @@ h6 {
   display: block;
   width: 24px;
   height: 3px;
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 6px;
   border-radius: 2px;
   transition: transform 0.3s ease-in-out;
@@ -671,7 +708,7 @@ h6 {
   width: 30px;
   height: 3px;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: #ffffff;
   transition: transform 0.3s ease-in-out;
 }
 .burger-icon__menu-icon::before {
@@ -701,17 +738,17 @@ h6 {
     background-color: rgba(255, 201, 120, 0.2);
   }
   .burger-icon__wrapper:active, .burger-icon__wrapper.burger_wrapper--transparent:active {
-    background-color: #181818;
+    background-color: rgba(255, 201, 120, 0.1);
   }
 }
 
-.burger-icon__wrapper.open + .burger-icon__menu-icon {
+.burger-icon__wrapper.burger-icon_open + .burger-icon__menu-icon {
   transform: translateY(3px) rotate(45deg);
 }
-.burger-icon__wrapper.open + .burger-icon__menu-icon::before {
+.burger-icon__wrapper.burger-icon_open + .burger-icon__menu-icon::before {
   transform: translate(-7px) rotate(90deg);
 }
-.burger-icon__wrapper.open + .burger-icon__menu-icon::after {
+.burger-icon__wrapper.burger-icon_open + .burger-icon__menu-icon::after {
   transform: translate(-7px, -3px) rotate(180deg);
 }
 
@@ -927,7 +964,7 @@ h6 {
     display: block;
   }
 }
-.header__burger-menu.open {
+.header__burger-menu_open {
   right: 0;
 }
 .header__button {
@@ -986,7 +1023,7 @@ h6 {
   border-top: 1px solid #2e313a;
 }
 .footer__link {
-  color: rgb(255, 176, 119);
+  color: #ffb077;
 }
 .footer__logo {
   font-size: 65px;
@@ -1118,7 +1155,7 @@ h6 {
 }
 @media only screen and (max-width: 1720px) {
   .main-block__body {
-    padding: 147px 30px 60px;
+    padding: 147px 30px 100px 60px;
   }
 }
 @media only screen and (max-width: 1250px) {
@@ -1372,6 +1409,7 @@ h6 {
 .about__image-block {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 .about__content {
   max-width: 630px;
@@ -1393,7 +1431,8 @@ h6 {
   }
 }
 .about__button {
-  margin-left: 20px;
+  margin-left: 53px;
+  margin-right: 20px;
 }
 @media only screen and (max-width: 767px) {
   .about__button {

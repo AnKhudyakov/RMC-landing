@@ -20,20 +20,49 @@ function showDivs(n) {
   x[slideIndex - 1].style.display = "block";
 }
 
+// Set active menu-item
+function setActive(el, list) {
+  list.filter((item) => item === el)[0].classList.add("menu__link_active");
+  list
+    .filter((item) => item != el)
+    .forEach((element) => element.classList.remove("menu__link_active"));
+}
+
+// Filter projects
+const all = document.querySelector("#all");
+const architecture = document.querySelector("#architecture");
+const constuction = document.querySelector("#constuction");
+const interior = document.querySelector("#interior");
+const projects = [all, architecture, constuction, interior];
+const projectCards = document.querySelectorAll(".project-last__card");
+
+projects.forEach((element) => {
+  element.addEventListener("click", () => {
+    setActive(element, projects);
+    element !== all
+      ? projectCards.forEach((card) => {
+          if (card.id === element.id) {
+            card.classList.remove("card_hide");
+          } else card.classList.add("card_hide");
+        })
+      : projectCards.forEach((card) => card.classList.remove("card_hide"));
+  });
+});
+
 //Burger Menu
 const burgerMenuButton = document.querySelector("#burger-button");
 const navigationMenu = document.querySelector(".header__burger-menu");
 const burgerLink = document.querySelectorAll(".menu__link_burger");
 
 burgerMenuButton.addEventListener("click", () => {
-  burgerMenuButton.classList.toggle("open");
-  navigationMenu.classList.toggle("open");
+  burgerMenuButton.classList.toggle("burger-icon_open");
+  navigationMenu.classList.toggle("header__burger-menu_open");
 });
 
 burgerLink.forEach(function (link) {
   link.addEventListener("click", () => {
-    burgerMenuButton.classList.toggle("open");
-    navigationMenu.classList.toggle("open");
+    burgerMenuButton.classList.toggle("burger-icon_open");
+    navigationMenu.classList.toggle("header__burger-menu_open");
   });
 });
 

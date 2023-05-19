@@ -1,9 +1,20 @@
 .button-circle {
   position: relative;
+  width: fit-content;
+  height: fit-content;
   &__center {
     top: calc(50% - 19px);
     left: calc(50% - 19px);
     position: absolute;
+  }
+  &__image {
+    width: 150px;
+    height: 150px;
+    transition: all 0.3s ease-in-out;
+    background: no-repeat 50% 50% url(../assets/images/readmore.svg);
+    &:hover {
+      background: no-repeat 50% 50% url(../assets/images/readmore-fill.svg);    
+    }
   }
   @media only screen and (max-width: $breakpoints_desktop) {
     display: none;
