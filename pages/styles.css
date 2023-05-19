@@ -424,6 +424,7 @@ h6 {
 @media only screen and (max-width: 767px) {
   .card {
     min-width: calc(100vw - 40px);
+    height: 430px;
   }
 }
 .card img {
@@ -651,7 +652,7 @@ h6 {
 }
 @media only screen and (max-width: 767px) {
   .item-service {
-    padding: calc(90vh - 90px) 30px 30px;
+    padding: calc(80vh - 90px) 30px 30px;
   }
 }
 .item-service__subtitle {
@@ -878,6 +879,11 @@ h6 {
 @media only screen and (max-width: 1250px) {
   .header__container {
     display: flex;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header__container {
+    min-height: 60px;
   }
 }
 .header__body {
@@ -1361,7 +1367,7 @@ h6 {
 }
 @media only screen and (max-width: 767px) {
   .services__item_slider {
-    height: 90vh;
+    height: 80vh;
   }
 }
 .services__subtitle {

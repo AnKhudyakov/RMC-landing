@@ -6,7 +6,7 @@
     width: 100%;
   }
   @media only screen and (max-width: $breakpoints_mobile) {
-    padding: calc(90vh - 90px) 30px 30px;
+    padding: calc(80vh - 90px) 30px 30px;
    }
   &__subtitle {
     position: relative;

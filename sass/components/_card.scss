@@ -11,6 +11,7 @@
   }
   @media only screen and (max-width: $breakpoints_mobile) {
     min-width: calc(100vw - 2*$padding_mobile) ;
+    height: 430px;
   }
   img {
     width: 100%;
